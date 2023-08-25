@@ -27,7 +27,7 @@ function Sidebar() {
         {links.map((link: LinkItem) => (
           <li
             className={` py-2 px-5 font-medium text-sm ${
-              activeLink === link.path ? `bg-gray-100 rounded ` : ``
+              activeLink === link.path ? `bg-slate-100 rounded ` : ``
             }`}
           >
             <Link to={link.path} key={link.path}>

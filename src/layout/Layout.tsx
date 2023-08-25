@@ -12,7 +12,7 @@ function Layout({ children }: LayoutProps) {
       <Navbar />
       <div className="flex h-full pt-16">
         <Sidebar />
-        <main className="flex flex-col align-center w-full h-full overflow-y-auto p-4">
+        <main className="flex flex-col align-center w-full h-full overflow-y-auto p-8">
           {children}
         </main>
       </div>
