@@ -61,7 +61,7 @@ const LineChartComponent: React.FC<LineChartProps> = ({ data }) => {
           strokeWidth={1}
           dot={{ r: 0.5 }} // Customize the data point dots
         />
-      <Brush dataKey="date" height={10} stroke="black"/>
+      <Brush dataKey="date" height={10} stroke="black" tickFormatter={()=>''}/>
       </LineChart>
     </ResponsiveContainer>
   );
