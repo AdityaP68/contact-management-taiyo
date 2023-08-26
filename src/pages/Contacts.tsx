@@ -4,7 +4,8 @@ import Card from "../components/UI/Card";
 import { Contact } from "../utils/types";
 // import CreateContactModal from "../components/Contacts/CreateContactModal";
 // import { createPortal } from "react-dom";
-import { useState } from "react";
+
+import { Link } from "react-router-dom";
 
 type RootState = {
   contacts: {
@@ -14,21 +15,20 @@ type RootState = {
 
 function Contacts() {
   const contacts = useSelector((state: RootState) => state.contacts.contacts);
-  const [showModal, setShowModal] = useState(false);
   console.log(contacts);
-  console.log(showModal)
+
   return (
     <>
-      
       <div>
         <Card>
           <p className="p-2 font-medium">Total Contacts: {contacts.length}</p>
-          <button
-            onClick={() => setShowModal(true)}
+          
+          <Link to={'/create-contact'}
             className="bg-black text-white py-2 px-4 rounded ml-auto hover:bg-gray-900"
           >
             + create a new contact
-          </button>
+          </Link>
+
         </Card>
         <section className="grid grid-cols-4 gap-4 mt-6 w-full">
           {contacts.map((contact) => (

@@ -36,7 +36,7 @@ export type CountryData = {
     id: string
     name: string;
     email: string;
-    phone: number;
+    phone: number | string;
     address?: string;
     age?: number;
   }
