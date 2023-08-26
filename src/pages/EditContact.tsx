@@ -39,28 +39,30 @@ function EditContact() {
       navigate(`/`); // Redirect to the edited contact's details
     }
   };
-  
+
   const handleDelete = () => {
     if (contact) {
       dispatch(deleteContact(contact.id)); // Dispatch the deleteContact action
-      navigate('/') // Redirect to contacts list
+      navigate("/"); // Redirect to contacts list
     }
   };
 
-  console.log(contact);
   return (
-    <div className="bg-white rounded w-10/12 p-8 mx-auto">
+    <div className="bg-white rounded p-6 sm:p-8 mx-auto">
       <div className="flex  justify-between items-center ">
-        <h1 className="font-semibold text-lg">Contact Details:</h1>
+        <h1 className="font-semibold text-lg">Edit Details:</h1>
         <div className="flex items-center gap-2">
           <Link
             to={"/"}
-            className="bg-black text-white p-2 px-4 rounded font-medium text-sm"
+            className="bg-black text-white py-1 px-2  sm:p-2 sm:px-4 rounded font-medium text-sm"
           >
             Back
           </Link>
-          <button onClick={handleDelete} className="bg-black text-white p-2 rounded font-medium text-sm">
-            Delete Contact
+          <button
+            onClick={handleDelete}
+            className="bg-black text-white py-1 px-2 sm:p-2 sm:px-4 rounded font-medium text-sm"
+          >
+            Delete
           </button>
         </div>
       </div>

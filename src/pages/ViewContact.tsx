@@ -26,21 +26,21 @@ function ViewContact() {
   };
 
   return (
-    <div className="bg-white rounded w-10/12 p-6 mx-auto">
+    <div className="bg-white rounded w-full sm:w-10/12 p-4 py-6 sm:p-6 mx-auto">
       <div className="flex  justify-between items-center ">
         <h1 className="font-semibold text-lg">Contact Details:</h1>
         <div className="flex items-center gap-2">
           <Link
             to={"/"}
-            className="bg-black text-white p-2 px-4 rounded font-medium text-sm"
+            className="bg-black text-white py-1 px-2  sm:p-2 sm:px-4 rounded font-medium text-sm"
           >
             Back
           </Link>
           <button
             onClick={handleDelete}
-            className="bg-black text-white p-2 rounded font-medium text-sm"
+            className="bg-black text-white py-1 px-2 sm:p-2 sm:px-4 rounded font-medium text-sm"
           >
-            Delete Contact
+            Delete
           </button>
         </div>
       </div>

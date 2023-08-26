@@ -31,9 +31,9 @@ function CreateContact() {
     navigate("/");
   };
   return (
-    <div className="bg-white px-8 py-6 rounded w-10/12 mx-auto">
+    <div className="bg-white px-8 py-6 rounded w-full sm:w-10/12 mx-auto">
       <div className="flex items-center justify-between">
-        <h1 className="font-semibold text-lg mt-2 ">Create a New Contact:</h1>
+        <h1 className="font-semibold text-lg">Create Contact:</h1>
         <Link
           to="/"
           className="text-white text-xs bg-black py-2 px-4 rounded i"
@@ -41,11 +41,11 @@ function CreateContact() {
           back
         </Link>
       </div>
-      <form className=" mt-10 flex flex-col gap-4" onSubmit={handleSubmit}>
+      <form className="mt-6 sm:mt-10 flex flex-col gap-4" onSubmit={handleSubmit}>
         <div className="flex gap-3 items-center">
-          <strong className="text-slate-500 w-20">Name:</strong>
+          <strong className=" w-20">Name:</strong>
           <input
-            className="border border-slate-600 w-full py-2 px-4 rounded"
+            className="border border-slate-600 w-full py-2 px-4 rounded placeholder:text-sm sm:placeholder:text-base"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -53,9 +53,9 @@ function CreateContact() {
           />
         </div>
         <div className="flex gap-3 items-center">
-          <strong className="text-slate-500 w-20">Email:</strong>
+          <strong className=" w-20">Email:</strong>
           <input
-            className="border border-slate-600 w-full py-2 px-4 rounded"
+            className="border border-slate-600 w-full py-2 px-4 rounded placeholder:text-sm sm:placeholder:text-base"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -63,9 +63,9 @@ function CreateContact() {
           />
         </div>
         <div className="flex gap-3 items-center">
-          <strong className="text-slate-500 w-20">Ph-No:</strong>
+          <strong className=" w-20">Ph-No:</strong>
           <input
-            className="border border-slate-600 w-full py-2 px-4 rounded"
+            className="border border-slate-600 w-full py-2 px-4 rounded placeholder:text-sm sm:placeholder:text-base"
             type="number"
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
@@ -74,7 +74,7 @@ function CreateContact() {
         </div>
         <button
           type="submit"
-          className="bg-black text-white font-medium p-2 rounded"
+          className="bg-black text-white font-medium p-2 rounded mt-4"
         >
           Submit
         </button>

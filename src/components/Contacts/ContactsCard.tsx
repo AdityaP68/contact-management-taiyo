@@ -1,17 +1,14 @@
 import React from "react";
 import { Contact } from "../../utils/types";
 import { Link } from "react-router-dom";
-// import { useDispatch } from "react-redux";
-// import { deleteContact } from "../../redux-store/contactsSlice";
 
 type ContactsCardProps = {
   contact: Contact;
 }
 
 const ContactsCard: React.FC<ContactsCardProps> = ({ contact }) => {
-
   return (
-    <div className=" bg-white rounded overflow-hidden flex flex-col ">
+    <div className=" bg-white rounded overflow-hidden flex flex-col">
       <div className="h-40 w-full bg-slate-400 flex items-center justify-center">
         <strong className="text-white font-bold text-5xl">{contact?.name[0]}</strong>
       </div>
