@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "./Sidebar/Sidebar";
 import Navbar from "./Navbar/Navbar";
+// import CreateContactModal from "../components/Contacts/CreateContactModal";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -8,6 +9,8 @@ type LayoutProps = {
 
 function Layout({ children }: LayoutProps) {
   return (
+    <>
+    {/* <CreateContactModal/> */}
     <div className="h-screen h-max-screen w-screen bg-gray-200">
       <Navbar />
       <div className="flex h-full pt-16">
@@ -17,6 +20,7 @@ function Layout({ children }: LayoutProps) {
         </main>
       </div>
     </div>
+    </>
   );
 }
 

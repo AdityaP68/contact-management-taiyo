@@ -1,7 +1,7 @@
 import React from "react";
 import { Contact } from "../../utils/types";
-import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux-store/contactsSlice";
+// import { useDispatch } from "react-redux";
+// import { deleteContact } from "../../redux-store/contactsSlice";
 
 type ContactsCardProps = {
   contact: Contact;
@@ -9,11 +9,11 @@ type ContactsCardProps = {
 
 const ContactsCard: React.FC<ContactsCardProps> = ({ contact }) => {
   console.log(contact)
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const handleDelete = () =>{
-    dispatch(deleteContact(contact.id))
-  }
+  // const handleDelete = () =>{
+  //   dispatch(deleteContact(contact.id))
+  // }
 
   return (
     <div className=" bg-white rounded overflow-hidden flex flex-col ">
