@@ -29,9 +29,9 @@ function Contacts() {
       </div>
       {/* Display contact cards */}
       <section className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4 mt-6 w-full">
-        {contacts.map((contact) => (
+        {contacts.length ? contacts?.map((contact) => (
           <ContactsCard key={contact.id} contact={contact} />
-        ))}
+        )): "No Data Found"}
       </section>
     </div>
   );
