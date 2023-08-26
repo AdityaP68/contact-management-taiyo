@@ -15,7 +15,7 @@ interface LineChartCardProps {
 // LineChartCard: A functional component to render a card containing a LineChart
 const LineChartCard: React.FC<LineChartCardProps> = ({ data }) => {
   return (
-    <div className="w-full h-[55vh] bg-white px-10 pt-6 pb-16 rounded">
+    <div className="w-full h-[40vh] sm:h-[55vh] bg-white px-3 sm:px-10 py-4 sm:pt-6 pb-16 rounded">
       {/* Display the title */}
       <h1 className="mb-6 font-semibold text-lg">Historical Data of Covid cases</h1>
       

@@ -11,8 +11,8 @@ type CovidMapCardProps = {
 function LeafletChartCard({ countriesData }: CovidMapCardProps) {
   console.log(countriesData); // Log the countriesData to the console
   return (
-    <div className="w-full bg-white rounded mt-6 px-10 py-6">
-      <h1 className="mb-6 font-semibold text-lg">Country Wise Case Spread</h1>
+    <div className="w-full bg-white rounded mt-6 px-3 sm:px-10 py-4 sm:py-6">
+      <h1 className="mb-4 sm:mb-6 font-semibold text-lg">Country Wise Case Spread</h1>
       {/* Render the LeafletChart component */}
       <LeafletChart countriesData={countriesData} />
     </div>

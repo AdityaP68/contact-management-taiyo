@@ -8,6 +8,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  Brush,
 } from "recharts";
 
 // Define the structure of each data point
@@ -20,6 +21,15 @@ interface DataPoint {
 interface LineChartProps {
   data: DataPoint[];
 }
+
+const formatYAxisTick = (tickValue: number) => {
+  if (tickValue >= 1000000) {
+    return `${(tickValue / 1000000).toFixed(1)}M`;
+  }
+  return tickValue.toString();
+};
+
+
 
 // LineChartComponent: A functional component to render a line chart
 const LineChartComponent: React.FC<LineChartProps> = ({ data }) => {
@@ -34,7 +44,7 @@ const LineChartComponent: React.FC<LineChartProps> = ({ data }) => {
         <XAxis dataKey="date" tick={{ fontSize: 10 }} />
         
         {/* Render the YAxis */}
-        <YAxis tick={{ fontSize: 10 }} />
+        <YAxis tick={{ fontSize: 10 }} tickFormatter={formatYAxisTick} />
         
         {/* Render the Tooltip */}
         <Tooltip />
@@ -51,6 +61,7 @@ const LineChartComponent: React.FC<LineChartProps> = ({ data }) => {
           strokeWidth={1}
           dot={{ r: 0.5 }} // Customize the data point dots
         />
+      <Brush dataKey="date" height={10} stroke="black"/>
       </LineChart>
     </ResponsiveContainer>
   );

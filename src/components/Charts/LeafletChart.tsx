@@ -9,12 +9,13 @@ type LeafletMapData = {
 
 // LeafletChart component
 function LeafletChart({ countriesData }: LeafletMapData) {
+  const isSmallScreen = window.innerWidth <= 600; 
   return (
     // Create a map container
     <MapContainer
       center={[0, 0]}
-      zoom={2}
-      style={{ height: "80vh", width: "100%" }}
+      zoom={isSmallScreen? 1 : 2}
+      style={{ height: isSmallScreen? "40vh" : "80vh", width: "100%" }}
     >
       {/* Add a tile layer for the map */}
       <TileLayer
@@ -27,7 +28,7 @@ function LeafletChart({ countriesData }: LeafletMapData) {
         <CircleMarker
           key={country.country}
           center={[country.countryInfo.lat, country.countryInfo.long]}
-          radius={Math.sqrt(country.active) * 0.03} // Adjust the radius based on the data
+          radius={Math.sqrt(country.active) * (isSmallScreen? 0.02 : 0.03)} // Adjust the radius based on the data
           fillColor="red" // Set a color based on data or other criteria
           fillOpacity={0.4}
           stroke={false}
