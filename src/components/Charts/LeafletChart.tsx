@@ -2,17 +2,21 @@ import { MapContainer, TileLayer, CircleMarker, Popup } from "react-leaflet";
 import { CountryData } from "../../utils/types";
 import "leaflet/dist/leaflet.css";
 
+// Define the props for the LeafletChart component
 type LeafletMapData = {
   countriesData: CountryData[];
 };
 
+// LeafletChart component
 function LeafletChart({ countriesData }: LeafletMapData) {
   return (
+    // Create a map container
     <MapContainer
       center={[0, 0]}
       zoom={2}
       style={{ height: "80vh", width: "100%" }}
     >
+      {/* Add a tile layer for the map */}
       <TileLayer
         url="https://api.maptiler.com/maps/basic-v2/256/{z}/{x}/{y}.png?key=b5ibGU3a1uvTSlZaurNj"
         attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
@@ -28,6 +32,7 @@ function LeafletChart({ countriesData }: LeafletMapData) {
           fillOpacity={0.4}
           stroke={false}
         >
+          {/* Display a popup with country information */}
           <Popup>
             <strong>{country.country}</strong>
             <br />
