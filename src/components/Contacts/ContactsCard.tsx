@@ -9,16 +9,12 @@ type ContactsCardProps = {
 }
 
 const ContactsCard: React.FC<ContactsCardProps> = ({ contact }) => {
-  console.log(contact)
-  // const dispatch = useDispatch();
-
-  // const handleDelete = () =>{
-  //   dispatch(deleteContact(contact.id))
-  // }
 
   return (
     <div className=" bg-white rounded overflow-hidden flex flex-col ">
-      <div className="h-40 w-full bg-slate-300"></div>
+      <div className="h-40 w-full bg-slate-400 flex items-center justify-center">
+        <strong className="text-white font-bold text-5xl">{contact?.name[0]}</strong>
+      </div>
       <div className="p-4 flex flex-col gap-2 py-6 px-5">
         <div className="flex gap-1">
           <strong>Name:</strong>

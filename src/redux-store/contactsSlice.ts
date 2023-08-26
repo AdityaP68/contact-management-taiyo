@@ -3,10 +3,20 @@ import { Contact } from "../utils/types";
 
 type ContactsState = {
   contacts: Contact[];
-}
+};
 
 const initialState: ContactsState = {
-  contacts: [{id: '1', name: 'John Doe', email: 'email@gmail.com', phone: 1234567}],
+  contacts: [
+    { id: "1", name: "John Doe", email: "email@gmail.com", phone: 1234567 },
+    { id: "2", name: "Jack Harlow", email: "jack@gmail.com", phone: 1234567 },
+    {
+      id: "3",
+      name: "Travis Scott",
+      email: "travis@gmail.com",
+      phone: 1234567,
+    },
+    { id: "4", name: "SZA", email: "work.sza@gmail.com", phone: 1234567 },
+  ],
 };
 
 const contactsSlice = createSlice({
@@ -24,7 +34,9 @@ const contactsSlice = createSlice({
       }
     },
     deleteContact: (state, action: PayloadAction<string>) => {
-      state.contacts = state.contacts.filter(contact => contact.id !== action.payload);
+      state.contacts = state.contacts.filter(
+        (contact) => contact.id !== action.payload
+      );
     },
   },
 });
