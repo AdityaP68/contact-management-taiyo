@@ -24,8 +24,9 @@ function Sidebar() {
   return (
     <aside className="w-60 bg-white pt-6">
       <ul className="py-2 pl-2 pr-4 ml-2 flex flex-col gap-3 ">
-        {links.map((link: LinkItem) => (
+        {links.map((link: LinkItem, key: number) => (
           <li
+            key={key}
             className={` py-2 px-5 font-medium text-sm ${
               activeLink === link.path ? `bg-slate-100 rounded ` : ``
             }`}
