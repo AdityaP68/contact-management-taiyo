@@ -21,9 +21,9 @@ function Layout({ children }: LayoutProps) {
           <ul className="mt-20 text-white w-full p-10 py-10 flex flex-col gap-10">
             {/* Menu items */}
             <li className="border-b-2 border-slate-600 py-3 px-2">
-              <Link to={"/"}>Contacts</Link>
+              <Link to={"/"} onClick={()=>setIsMenuOpen(prev=>!prev)}>Contacts</Link>
             </li>
-            <li className="border-b-2 border-slate-600 py-3 px-2">
+            <li className="border-b-2 border-slate-600 py-3 px-2" onClick={()=>setIsMenuOpen(prev=>!prev)}>
               <Link to={"/analytics"}>Analytics</Link>
             </li>
           </ul>
