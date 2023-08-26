@@ -6,11 +6,17 @@ Welcome to the Contact Management System! This application allows you to manage 
 
 1. Clone this repository to your local machine using:
 
-```git clone https://github.com/AdityaP68/contact-management-taiyo.git```
+```
+git clone https://github.com/AdityaP68/contact-management-taiyo.git
+
+```
 
 2. Navigate to the project directory:
 
-```cd contact-management-taiyo```
+```
+cd contact-management-taiyo
+
+```
 
 3. Install the dependencies using npm or yarn:
 
