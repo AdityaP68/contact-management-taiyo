@@ -22,13 +22,13 @@ interface LineChartProps {
   data: DataPoint[];
 }
 
+// Change the format of key values displayed at y-axis
 const formatYAxisTick = (tickValue: number) => {
   if (tickValue >= 1000000) {
     return `${(tickValue / 1000000).toFixed(1)}M`;
   }
   return tickValue.toString();
 };
-
 
 
 // LineChartComponent: A functional component to render a line chart
